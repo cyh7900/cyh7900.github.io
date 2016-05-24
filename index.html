@@ -4,10 +4,54 @@
 <link rel="icon" href="image/action1.gif" type="image/gif" >
 <script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript" src="jquery.media.js"></script>
+<script src="AC_RunActiveContent.js" language="javascript"></script>
 </head>
 
 <body>
+<script language="javascript">
+	if (AC_FL_RunContent == 0) {
+		alert("This page requires AC_RunActiveContent.js.");
+	} else {
+		AC_FL_RunContent(
+			'codebase', 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0',
+			'width', '320',
+			'height', '256',
+			'src', 'jcplayer',
+			'quality', 'high',
+			'pluginspage', 'http://www.macromedia.com/go/getflashplayer',
+			'align', 'middle',
+			'play', 'true',
+			'loop', 'true',
+			'scale', 'noScale',
+			'wmode', 'window',
+			'devicefont', 'false',
+			'id', 'jcplayer',
+			'bgcolor', '#ffffff',
+			'name', 'jcplayer',
+			'menu', 'true',
+			'allowFullScreen', 'true',
+			'allowScriptAccess','sameDomain',
+			'FlashVars','videoURL=upup.mp4&autoPlay=false&startPhotoSource=../../../SampleFLV/photo.jpg&backgroundColor1=0x333333&backgroundColor2=0x222222',
+			'movie', 'jcplayer',
+			'salign','TL'
+			); //end AC code
+	}
+<!--Settable JCPlayer  params :startPhotoSource,videoURL,loop,autoPlay,scaleMode,volume,bufferTime,backgroundColor1,movieBackgroundColor,backgroundColor2,highlightColor,inkColor,playButton,timeBar,seekBar,volumeButton,fullScreenButton,skin,smoothing,autoHide,autoHideFullScreen,offsetY,offsetYFullScreen,margins,marginsFullScreen -->
+</script>
 <!--<embed autoplay="true" src="一碟泥咋能反扔嘞.mp3"  width="200" height="45" />--!>
-<embed autoplay="true" src="萌萌我是千色比.mp3"  width="200" height="45" />						
+<!--<embed autoplay="true" src="萌萌我是千色比.mp3"  width="200" height="45" />--!><div>ok</div>
+<noscript>
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="320" height="265" id="jcplayer" align="TL">
+	<param name="allowScriptAccess" value="sameDomain" />
+	<param name="FlashVars" value="videoURL=upup.mp4&autoPlay=false&startPhotoSource=../../../SampleFLV/photo.jpg&backgroundColor1=0x333333&backgroundColor2=0x222222">
+	<param name="allowFullScreen" value="true" />
+    <param name="salign" value="TL" />
+    <param name="scale" value="noScale" />
+	<param name="movie" value="jcplayer.swf" />
+    <param name="quality" value="high" />
+    <param name="bgcolor" value="#ffffff" />	
+    <embed src="jcplayer.swf" FlashVars="videoURL=../../../SampleFLV/video.flv&autoPlay=false&startPhotoSource=../../../SampleFLV/photo.jpg&backgroundColor1=0x333333&backgroundColor2=0x222222" quality="high" bgcolor="#ffffff" width="320" height="265" name="jcplayer" align="middle" salign="TL" scale="noScale" allowScriptAccess="sameDomain" allowFullScreen="true" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+</noscript>				
 </body>
 </html>
